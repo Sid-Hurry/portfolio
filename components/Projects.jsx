@@ -68,53 +68,64 @@ export default function Projects() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-50px" }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto"
+          className="flex flex-col gap-12 max-w-5xl mx-auto"
         >
           {projects.map((project, index) => (
             <motion.div
               key={index}
               variants={itemVariants}
-              className="glass rounded-3xl overflow-hidden group flex flex-col h-full hover:border-primary/50 transition-colors"
+              whileHover={{ y: -8 }}
+              className="glass rounded-3xl overflow-hidden group flex flex-col hover:border-primary/40 transition-all duration-500 relative"
             >
+              {/* Subtle Animated Background Gradient on Hover */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+
               {/* Project Content */}
-              <div className="p-8 flex-grow flex flex-col">
-                <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors">
-                  {project.title}
-                </h3>
-                <p className="text-foreground/70 mb-6 flex-grow">
+              <div className="p-8 md:p-12 flex-grow flex flex-col relative z-10">
+                <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8">
+                  <h3 className="text-3xl md:text-4xl font-extrabold group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary transition-all duration-300">
+                    {project.title}
+                  </h3>
+                  
+                  {/* Action Buttons */}
+                  <div className="flex items-center gap-4">
+                    {project.githubLink !== "#" && (
+                      <a
+                        href={project.githubLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="GitHub Repository"
+                        className="p-3 rounded-full bg-foreground/5 hover:bg-foreground/10 transition-colors flex items-center justify-center"
+                      >
+                        <FaGithub className="w-6 h-6" />
+                      </a>
+                    )}
+                    <a
+                      href={project.liveLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-primary to-secondary text-white font-semibold hover:shadow-lg hover:shadow-primary/25 transition-all hover:scale-105"
+                    >
+                      <span>Live Demo</span>
+                      <ExternalLink className="w-4 h-4" />
+                    </a>
+                  </div>
+                </div>
+
+                <p className="text-foreground/70 text-lg mb-10 max-w-3xl leading-relaxed">
                   {project.description}
                 </p>
 
                 {/* Tech Stack Tags */}
-                <div className="flex flex-wrap gap-2 mb-8">
+                <div className="flex flex-wrap gap-3 mt-auto pt-8 border-t border-foreground/5">
                   {project.techStack.map((tech, techIndex) => (
                     <span
                       key={techIndex}
-                      className="px-3 py-1 bg-secondary/10 text-secondary rounded-lg text-xs font-semibold"
+                      className="px-4 py-2 bg-background/50 border border-foreground/5 rounded-xl text-sm font-semibold group-hover:border-primary/20 transition-colors"
                     >
                       {tech}
                     </span>
                   ))}
-                </div>
-
-                {/* Action Buttons */}
-                <div className="flex items-center gap-4 mt-auto pt-4 border-t border-white/5">
-                  <a
-                    href={project.liveLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-sm font-semibold hover:text-primary transition-colors"
-                  >
-                    <ExternalLink className="w-4 h-4" /> Live Demo
-                  </a>
-                  <a
-                    href={project.githubLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-sm font-semibold hover:text-primary transition-colors ml-4"
-                  >
-                    <FaGithub className="w-4 h-4" /> GitHub
-                  </a>
                 </div>
               </div>
             </motion.div>
