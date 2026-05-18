@@ -37,8 +37,8 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="font-bold text-lg">Email Me</h3>
-                  <a href="mailto:your-email@example.com" className="text-foreground/70 hover:text-primary transition-colors">
-                    your-email@example.com
+                  <a href="mailto:siddharthhooda0013@gmail.com" className="text-foreground/70 hover:text-primary transition-colors">
+                    siddharthhooda0013@gmail.com
                   </a>
                 </div>
               </div>
@@ -49,8 +49,8 @@ export default function Contact() {
                 <div>
                   <h3 className="font-bold text-lg">Social Media</h3>
                   <div className="flex gap-4 mt-1">
-                    <a href="https://linkedin.com/in/siddharth-hooda" target="_blank" rel="noopener noreferrer" className="text-foreground/70 hover:text-primary transition-colors">LinkedIn</a>
-                    <a href="https://github.com/SiddharthHooda" target="_blank" rel="noopener noreferrer" className="text-foreground/70 hover:text-primary transition-colors">GitHub</a>
+                    <a href="https://www.linkedin.com/in/siddharth-hooda-188606324/" target="_blank" rel="noopener noreferrer" className="text-foreground/70 hover:text-primary transition-colors">LinkedIn</a>
+                    <a href="https://github.com/Sid-Hurry" target="_blank" rel="noopener noreferrer" className="text-foreground/70 hover:text-primary transition-colors">GitHub</a>
                   </div>
                 </div>
               </div>

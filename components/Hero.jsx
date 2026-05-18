@@ -105,9 +105,9 @@ export default function Hero() {
             className="flex items-center justify-center gap-6 mt-12"
           >
             {[
-              { icon: FaGithub, href: "https://github.com/SiddharthHooda", label: "GitHub" },
-              { icon: FaLinkedin, href: "https://linkedin.com/in/siddharth-hooda", label: "LinkedIn" },
-              { icon: Mail, href: "mailto:your-email@example.com", label: "Email" },
+              { icon: FaGithub, href: "https://github.com/Sid-Hurry", label: "GitHub" },
+              { icon: FaLinkedin, href: "https://www.linkedin.com/in/siddharth-hooda-188606324/", label: "LinkedIn" },
+              { icon: Mail, href: "mailto:siddharthhooda0013@gmail.com", label: "Email" },
             ].map((social, index) => (
               <a
                 key={index}
