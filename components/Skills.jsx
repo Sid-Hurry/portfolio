@@ -2,27 +2,11 @@
 
 import { motion } from "framer-motion";
 
-const skills = [
-  {
-    category: "Frontend",
-    items: ["React.js", "Next.js", "Tailwind CSS", "HTML/CSS"],
-  },
-  {
-    category: "Backend",
-    items: ["Node.js", "Express.js"],
-  },
-  {
-    category: "Database",
-    items: ["MongoDB", "SQL"],
-  },
-  {
-    category: "Programming Languages",
-    items: ["JavaScript", "Python", "C++", "C"],
-  },
-  {
-    category: "Tools",
-    items: ["Git", "GitHub", "Postman", "Microsoft Excel"],
-  },
+const allSkills = [
+  "React.js", "Next.js", "Node.js", "Express.js", 
+  "MongoDB", "SQL", "Tailwind CSS", "HTML/CSS", 
+  "JavaScript", "Python", "C++", "C", 
+  "Git", "GitHub", "Postman", "Microsoft Excel"
 ];
 
 export default function Skills() {
@@ -30,13 +14,13 @@ export default function Skills() {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: { staggerChildren: 0.1 },
+      transition: { staggerChildren: 0.05 },
     },
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+    hidden: { opacity: 0, scale: 0.8, y: 20 },
+    visible: { opacity: 1, scale: 1, y: 0, transition: { type: "spring", stiffness: 100 } },
   };
 
   return (
@@ -58,27 +42,16 @@ export default function Skills() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-50px" }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto"
+          className="flex flex-wrap justify-center gap-4 md:gap-6 max-w-4xl mx-auto"
         >
-          {skills.map((skillGroup, index) => (
+          {allSkills.map((skill, index) => (
             <motion.div
               key={index}
               variants={itemVariants}
-              className="glass p-8 rounded-3xl hover:border-primary/30 transition-colors"
+              whileHover={{ scale: 1.1, y: -5 }}
+              className="glass px-6 py-3 rounded-full text-base md:text-lg font-medium text-foreground/80 hover:text-primary hover:border-primary/50 hover:bg-primary/5 transition-all shadow-sm cursor-default flex items-center justify-center"
             >
-              <h3 className="text-2xl font-bold mb-6 text-gradient inline-block">
-                {skillGroup.category}
-              </h3>
-              <div className="flex flex-wrap gap-3">
-                {skillGroup.items.map((skill, skillIndex) => (
-                  <span
-                    key={skillIndex}
-                    className="px-4 py-2 bg-background border border-foreground/10 rounded-xl text-sm font-medium hover:border-primary/50 hover:bg-primary/5 transition-colors cursor-default shadow-sm"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
+              {skill}
             </motion.div>
           ))}
         </motion.div>
