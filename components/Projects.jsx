@@ -11,6 +11,7 @@ const projects = [
     techStack: ["React.js", "Node.js", "MongoDB", "Tailwind CSS", "CoinGecko API"],
     liveLink: "https://crypto-nest-hwvo.vercel.app/",
     githubLink: "https://github.com/Sid-Hurry/CryptoNest",
+    color: "bg-amber-100 dark:bg-zinc-900/60",
   },
   {
     title: "SortedHive",
@@ -18,6 +19,7 @@ const projects = [
     techStack: ["Next.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
     liveLink: "https://sortedhive.vercel.app/",
     githubLink: "https://github.com/Sid-Hurry/sortedhive",
+    color: "bg-emerald-100 dark:bg-zinc-900/60",
   },
   {
     title: "CareConnect",
@@ -25,6 +27,7 @@ const projects = [
     techStack: ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
     liveLink: "https://careconnect-1v6s.vercel.app/",
     githubLink: "#",
+    color: "bg-sky-100 dark:bg-zinc-900/60",
   },
   {
     title: "SnipWand",
@@ -32,6 +35,7 @@ const projects = [
     techStack: ["Next.js", "React.js", "Tailwind CSS", "Markdown", "API Routes"],
     liveLink: "https://snipwand.vercel.app/",
     githubLink: "https://github.com/Sid-Hurry/snipwand",
+    color: "bg-rose-100 dark:bg-zinc-900/60",
   },
 ];
 
@@ -40,13 +44,13 @@ export default function Projects() {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: { staggerChildren: 0.2 },
+      transition: { staggerChildren: 0.15 },
     },
   };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
   };
 
   return (
@@ -59,8 +63,10 @@ export default function Projects() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">Featured Projects</h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+          <h2 className="text-3xl md:text-5xl font-black uppercase mb-4 tracking-tight text-foreground">
+            Featured Projects
+          </h2>
+          <div className="w-24 h-2 bg-primary border-2 border-border-color shadow-[2px_2px_0px_0px_var(--border-color)] mx-auto"></div>
         </motion.div>
 
         <motion.div
@@ -74,16 +80,12 @@ export default function Projects() {
             <motion.div
               key={index}
               variants={itemVariants}
-              whileHover={{ y: -8 }}
-              className="glass rounded-3xl overflow-hidden group flex flex-col hover:border-primary/40 transition-all duration-500 relative"
+              className={`border-[3.5px] border-border-color ${project.color} shadow-[6px_6px_0px_0px_var(--shadow-color)] hover:translate-x-[-6px] hover:translate-y-[-6px] hover:shadow-[12px_12px_0px_0px_var(--shadow-color)] active:translate-x-0 active:translate-y-0 active:shadow-[1px_1px_0px_0px_var(--shadow-color)] transition-all duration-300 rounded-3xl overflow-hidden group flex flex-col relative`}
             >
-              {/* Subtle Animated Background Gradient on Hover */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
-
               {/* Project Content */}
               <div className="p-8 md:p-12 flex-grow flex flex-col relative z-10">
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8">
-                  <h3 className="text-3xl md:text-4xl font-extrabold group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary transition-all duration-300">
+                  <h3 className="text-3xl md:text-4xl font-black uppercase tracking-tight text-foreground">
                     {project.title}
                   </h3>
                   
@@ -95,16 +97,16 @@ export default function Projects() {
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="GitHub Repository"
-                        className="p-3 rounded-full bg-foreground/5 hover:bg-foreground/10 transition-colors flex items-center justify-center"
+                        className="p-3 border-[3px] border-border-color bg-background text-foreground shadow-[3px_3px_0px_0px_var(--border-color)] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[5px_5px_0px_0px_var(--border-color)] active:translate-x-0 active:translate-y-0 transition-all rounded-xl flex items-center justify-center"
                       >
-                        <FaGithub className="w-6 h-6" />
+                        <FaGithub className="w-5 h-5" />
                       </a>
                     )}
                     <a
                       href={project.liveLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-primary to-secondary text-white font-semibold hover:shadow-lg hover:shadow-primary/25 transition-all hover:scale-105"
+                      className="flex items-center gap-2 px-5 py-3 border-[3px] border-border-color bg-primary text-white dark:text-black font-black uppercase tracking-wider shadow-[3px_3px_0px_0px_var(--border-color)] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[5px_5px_0px_0px_var(--border-color)] active:translate-x-0 active:translate-y-0 transition-all rounded-xl"
                     >
                       <span>Live Demo</span>
                       <ExternalLink className="w-4 h-4" />
@@ -112,16 +114,16 @@ export default function Projects() {
                   </div>
                 </div>
 
-                <p className="text-foreground/70 text-lg mb-10 max-w-3xl leading-relaxed">
+                <p className="text-foreground/80 font-bold text-sm md:text-base mb-10 max-w-3xl leading-relaxed">
                   {project.description}
                 </p>
 
                 {/* Tech Stack Tags */}
-                <div className="flex flex-wrap gap-3 mt-auto pt-8 border-t border-foreground/5">
+                <div className="flex flex-wrap gap-3 mt-auto pt-8 border-t-[2.5px] border-border-color">
                   {project.techStack.map((tech, techIndex) => (
                     <span
                       key={techIndex}
-                      className="px-4 py-2 bg-background/50 border border-foreground/5 rounded-xl text-sm font-semibold group-hover:border-primary/20 transition-colors"
+                      className="px-3.5 py-1.5 bg-background border-2 border-border-color text-foreground font-black text-xs md:text-sm shadow-[2px_2px_0px_0px_var(--border-color)] rounded-lg hover:translate-x-[-1px] hover:translate-y-[-1px] hover:shadow-[3px_3px_0px_0px_var(--border-color)] transition-all cursor-default"
                     >
                       {tech}
                     </span>
@@ -135,3 +137,4 @@ export default function Projects() {
     </section>
   );
 }
+

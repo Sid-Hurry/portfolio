@@ -3,15 +3,21 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #ffffff;
-  --foreground: #020617; /* Slate 950 */
-  --primary: #8b5cf6; /* Violet 500 */
-  --secondary: #06b6d4; /* Cyan 500 */
+  --background: #FCFAF2; /* Premium retro cream canvas */
+  --foreground: #0D0D0E; /* Deep pure charcoal/black */
+  --primary: #FF2E6C;    /* Energetic hot pink */
+  --secondary: #2563EB;  /* Deep vibrant blue */
+  --border-color: #0D0D0E;
+  --shadow-color: #0D0D0E;
 }
 
 .dark {
-  --background: #020617; /* Slate 950 */
-  --foreground: #f8fafc; /* Slate 50 */
+  --background: #09090B; /* Deep brutalist black */
+  --foreground: #FAFAFA; /* Crisp paper white */
+  --border-color: #FAFAFA;
+  --shadow-color: #FAFAFA;
+  --primary: #FACC15;    /* Vibrant neon yellow */
+  --secondary: #60A5FA;  /* High-contrast sky blue */
 }
 
 @theme inline {
@@ -27,44 +33,144 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-/* Glassmorphism utility */
-.glass {
-  background: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.dark .glass {
-  background: rgba(15, 23, 42, 0.6); /* Slate 900 with opacity */
-  border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-/* Custom Scrollbar */
+/* Custom Neo-Brutalist Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 12px;
 }
 ::-webkit-scrollbar-track {
   background: var(--background);
+  border-left: 3px solid var(--border-color);
 }
 ::-webkit-scrollbar-thumb {
   background: var(--primary);
-  border-radius: 4px;
+  border: 3px solid var(--border-color);
 }
 ::-webkit-scrollbar-thumb:hover {
   background: var(--secondary);
 }
 
-/* Text Gradients */
+/* Neo-Brutalist Core Styles */
+.neo-border {
+  border: 3.5px solid var(--border-color);
+}
+
+.neo-border-thin {
+  border: 2px solid var(--border-color);
+}
+
+.neo-shadow {
+  box-shadow: 4px 4px 0px 0px var(--shadow-color);
+}
+
+.neo-shadow-lg {
+  box-shadow: 8px 8px 0px 0px var(--shadow-color);
+}
+
+.neo-shadow-sm {
+  box-shadow: 2px 2px 0px 0px var(--shadow-color);
+}
+
+.neo-shadow-primary {
+  box-shadow: 4px 4px 0px 0px var(--primary);
+}
+
+.neo-shadow-secondary {
+  box-shadow: 4px 4px 0px 0px var(--secondary);
+}
+
+.neo-interactive {
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease;
+}
+
+.neo-interactive:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 8px 8px 0px 0px var(--shadow-color);
+}
+
+.neo-interactive:active {
+  transform: translate(0px, 0px);
+  box-shadow: 1px 1px 0px 0px var(--shadow-color);
+}
+
+/* Sticker highlight colors */
+.neo-highlight-yellow {
+  background-color: #FEF08A; /* yellow-200 */
+  color: #0D0D0E;
+}
+.neo-highlight-green {
+  background-color: #BBF7D0; /* green-200 */
+  color: #0D0D0E;
+}
+.neo-highlight-blue {
+  background-color: #BFDBFE; /* blue-200 */
+  color: #0D0D0E;
+}
+.neo-highlight-pink {
+  background-color: #FECDD3; /* pink-200 */
+  color: #0D0D0E;
+}
+.neo-highlight-purple {
+  background-color: #E9D5FF; /* purple-200 */
+  color: #0D0D0E;
+}
+.neo-highlight-orange {
+  background-color: #FED7AA; /* orange-200 */
+  color: #0D0D0E;
+}
+
+/* Dark mode overrides for highlight backgrounds so they look rich in both themes */
+.dark .neo-highlight-yellow {
+  background-color: #EAB308; /* yellow-500 */
+  color: #000000;
+}
+.dark .neo-highlight-green {
+  background-color: #22C55E; /* green-500 */
+  color: #000000;
+}
+.dark .neo-highlight-blue {
+  background-color: #3B82F6; /* blue-500 */
+  color: #FFFFFF;
+}
+.dark .neo-highlight-pink {
+  background-color: #EC4899; /* pink-500 */
+  color: #FFFFFF;
+}
+.dark .neo-highlight-purple {
+  background-color: #A855F7; /* purple-500 */
+  color: #FFFFFF;
+}
+.dark .neo-highlight-orange {
+  background-color: #F97316; /* orange-500 */
+  color: #000000;
+}
+
+/* Glassmorphism compatibility (re-styled to be neo-brutalist) */
+.glass {
+  background: var(--background);
+  border: 3.5px solid var(--border-color) !important;
+  box-shadow: 6px 6px 0px 0px var(--shadow-color) !important;
+  border-radius: 0px !important; /* Flat sharp edges */
+}
+
+.dark .glass {
+  background: #141416;
+  border: 3.5px solid var(--border-color) !important;
+  box-shadow: 6px 6px 0px 0px var(--shadow-color) !important;
+  border-radius: 0px !important;
+}
+
 .text-gradient {
-  background: linear-gradient(to right, var(--primary), var(--secondary));
+  background-color: var(--primary);
+  background-image: linear-gradient(45deg, var(--primary), var(--secondary));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+

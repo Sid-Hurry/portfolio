@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.variable} ${geistMono.variable} min-h-screen antialiased bg-background text-foreground selection:bg-primary/30`}
+        className={`${inter.variable} ${geistMono.variable} min-h-screen antialiased bg-background text-foreground selection:bg-primary selection:text-black`}
       >
         <ThemeProvider
           attribute="class"
