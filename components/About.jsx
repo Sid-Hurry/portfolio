@@ -50,10 +50,10 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0, rotate: 1 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.5 }}
-            className="relative max-w-sm mx-auto md:max-w-md"
+            className="relative max-w-[280px] xs:max-w-sm mx-auto md:max-w-md mt-8 md:mt-0"
           >
-            <div className="absolute -inset-4 bg-primary border-[3px] border-border-color shadow-[6px_6px_0px_0px_var(--border-color)] rounded-2xl rotate-[-3deg]" />
-            <div className="relative overflow-hidden border-[4px] border-border-color bg-amber-200 dark:bg-zinc-900 shadow-[8px_8px_0px_0px_var(--border-color)] rounded-2xl">
+            <div className="absolute -inset-2.5 xs:-inset-4 bg-primary border-[3px] border-border-color shadow-[4px_4px_0px_0px_var(--border-color)] xs:shadow-[6px_6px_0px_0px_var(--border-color)] rounded-2xl rotate-[-3deg]" />
+            <div className="relative overflow-hidden border-[4px] border-border-color bg-amber-200 dark:bg-zinc-900 shadow-[6px_6px_0px_0px_var(--border-color)] xs:shadow-[8px_8px_0px_0px_var(--border-color)] rounded-2xl">
               <Image
                 src="/pfp2.png"
                 alt="Pink panther wearing glasses"

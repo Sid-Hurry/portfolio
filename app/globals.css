@@ -27,6 +27,7 @@
   --color-secondary: var(--secondary);
   --font-sans: var(--font-inter), var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --breakpoint-xs: 390px;
 }
 
 body {
@@ -173,5 +174,3 @@ html {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
-
-

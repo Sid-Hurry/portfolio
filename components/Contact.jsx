@@ -33,7 +33,7 @@ export default function Contact() {
             transition={{ duration: 0.5 }}
             className="flex-1"
           >
-            <div className="border-[3.5px] border-border-color bg-sky-100 dark:bg-zinc-900/60 p-8 shadow-[6px_6px_0px_0px_var(--shadow-color)] hover:translate-x-[-3px] hover:translate-y-[-3px] hover:shadow-[9px_9px_0px_0px_var(--shadow-color)] transition-all rounded-3xl h-full flex flex-col gap-7">
+            <div className="border-[3.5px] border-border-color bg-sky-100 dark:bg-zinc-900/60 p-5 xs:p-8 shadow-[6px_6px_0px_0px_var(--shadow-color)] hover:translate-x-[-3px] hover:translate-y-[-3px] hover:shadow-[9px_9px_0px_0px_var(--shadow-color)] transition-all rounded-3xl h-full flex flex-col gap-7">
               <div>
                 <p className="inline-block mb-4 px-3 py-1 border-2 border-border-color bg-amber-300 text-black font-black uppercase text-xs tracking-wider shadow-[2px_2px_0px_0px_var(--border-color)] rounded-lg">
                   Open to connect
@@ -50,7 +50,7 @@ export default function Contact() {
                 </div>
                 <div className="min-w-0 pt-1">
                   <p className="font-black uppercase text-sm mb-1">Email Me</p>
-                  <a href="mailto:siddharthhooda0013@gmail.com" className="text-foreground/80 hover:text-primary transition-colors font-bold text-sm break-words">
+                  <a href="mailto:siddharthhooda0013@gmail.com" className="text-foreground/80 hover:text-primary transition-colors font-bold text-xs xs:text-sm break-words">
                     siddharthhooda0013@gmail.com
                   </a>
                 </div>
@@ -84,7 +84,7 @@ export default function Contact() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="flex-[1.5]"
           >
-            <form className="border-[3.5px] border-border-color bg-rose-100 dark:bg-zinc-900/60 p-8 shadow-[6px_6px_0px_0px_var(--shadow-color)] hover:translate-x-[-3px] hover:translate-y-[-3px] hover:shadow-[9px_9px_0px_0px_var(--shadow-color)] transition-all rounded-3xl flex flex-col gap-6" onSubmit={(e) => e.preventDefault()}>
+            <form className="border-[3.5px] border-border-color bg-rose-100 dark:bg-zinc-900/60 p-5 xs:p-8 shadow-[6px_6px_0px_0px_var(--shadow-color)] hover:translate-x-[-3px] hover:translate-y-[-3px] hover:shadow-[9px_9px_0px_0px_var(--shadow-color)] transition-all rounded-3xl flex flex-col gap-6" onSubmit={(e) => e.preventDefault()}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label htmlFor="name" className="text-sm font-black uppercase tracking-wider text-foreground ml-1">Name</label>

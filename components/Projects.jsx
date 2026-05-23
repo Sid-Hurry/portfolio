@@ -83,9 +83,9 @@ export default function Projects() {
               className={`border-[3.5px] border-border-color ${project.color} shadow-[6px_6px_0px_0px_var(--shadow-color)] hover:translate-x-[-6px] hover:translate-y-[-6px] hover:shadow-[12px_12px_0px_0px_var(--shadow-color)] active:translate-x-0 active:translate-y-0 active:shadow-[1px_1px_0px_0px_var(--shadow-color)] transition-all duration-300 rounded-3xl overflow-hidden group flex flex-col relative`}
             >
               {/* Project Content */}
-              <div className="p-8 md:p-12 flex-grow flex flex-col relative z-10">
+              <div className="p-5 xs:p-8 md:p-12 flex-grow flex flex-col relative z-10">
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8">
-                  <h3 className="text-3xl md:text-4xl font-black uppercase tracking-tight text-foreground">
+                  <h3 className="text-2xl xs:text-3xl md:text-4xl font-black uppercase tracking-tight text-foreground">
                     {project.title}
                   </h3>
                   

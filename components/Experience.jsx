@@ -27,7 +27,7 @@ export default function Experience() {
             className="relative pl-8 md:pl-0"
           >
             {/* Timeline Line */}
-            <div className="hidden md:block absolute left-[50%] top-0 bottom-0 w-[4px] bg-border-color"></div>
+            <div className="absolute left-[18px] md:left-[50%] md:-ml-[2px] top-0 bottom-0 w-[4px] bg-border-color"></div>
 
             {/* Experience Item */}
             <div className="md:flex items-center justify-between w-full mb-8">
@@ -37,8 +37,8 @@ export default function Experience() {
                 <Briefcase className="w-5 h-5" />
               </div>
 
-              <div className="w-full md:w-5/12 md:pl-8 lg:pl-12 ml-6 md:ml-0">
-                <div className="border-[3.5px] border-border-color bg-amber-100 dark:bg-zinc-900/60 p-8 shadow-[6px_6px_0px_0px_var(--shadow-color)] hover:translate-x-[-4px] hover:translate-y-[-4px] hover:shadow-[9px_9px_0px_0px_var(--shadow-color)] transition-all rounded-3xl">
+              <div className="w-full md:w-5/12 md:pl-8 lg:pl-12 ml-8 md:ml-0">
+                <div className="border-[3.5px] border-border-color bg-amber-100 dark:bg-zinc-900/60 p-5 xs:p-8 shadow-[6px_6px_0px_0px_var(--shadow-color)] hover:translate-x-[-4px] hover:translate-y-[-4px] hover:shadow-[9px_9px_0px_0px_var(--shadow-color)] transition-all rounded-3xl">
                   <h3 className="text-2xl font-black uppercase mb-1">Web Development Intern</h3>
                   <p className="text-primary font-black uppercase tracking-wider mb-6 text-sm">Fibre Air</p>
                   <ul className="space-y-4 text-foreground/80 font-bold text-sm">

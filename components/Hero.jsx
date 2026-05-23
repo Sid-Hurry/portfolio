@@ -56,20 +56,20 @@ export default function Hero() {
         >
           <motion.h1
             variants={itemVariants}
-            className="text-4xl sm:text-6xl md:text-8xl font-black uppercase tracking-tight mb-8 leading-none text-foreground"
+            className="text-3xl xs:text-4xl sm:text-6xl md:text-8xl font-black uppercase tracking-tight mb-8 leading-none text-foreground"
           >
             Hi, I'm{" "}
-            <span className="inline-block px-6 py-2 my-2 border-[4px] border-border-color bg-primary text-white dark:text-black shadow-[6px_6px_0px_0px_var(--border-color)] rotate-[-1deg]">
+            <span className="inline-block px-4 xs:px-6 py-2 my-2 border-[4px] border-border-color bg-primary text-white dark:text-black shadow-[4px_4px_0px_0px_var(--border-color)] sm:shadow-[6px_6px_0px_0px_var(--border-color)] rotate-[-1deg]">
               Siddharth Hooda
             </span>
           </motion.h1>
 
           <motion.h2
             variants={itemVariants}
-            className="text-lg sm:text-2xl md:text-3xl font-black uppercase text-foreground/90 mb-8 tracking-wide"
+            className="text-base xs:text-lg sm:text-2xl md:text-3xl font-black uppercase text-foreground/90 mb-8 tracking-wide"
           >
             Full Stack Developer | Data Analyst |{" "}
-            <span className="inline-block px-3 py-1 border-2 border-border-color bg-secondary text-white shadow-[3px_3px_0px_0px_var(--border-color)]">
+            <span className="inline-block px-2 xs:px-3 py-0.5 xs:py-1 border-2 border-border-color bg-secondary text-white shadow-[2px_2px_0px_0px_var(--border-color)] sm:shadow-[3px_3px_0px_0px_var(--border-color)]">
               Car Enthusiast
             </span>
           </motion.h2>
@@ -104,7 +104,7 @@ export default function Hero() {
 
           <motion.div
             variants={itemVariants}
-            className="flex items-center justify-center gap-5 mt-14"
+            className="flex flex-wrap items-center justify-center gap-4 sm:gap-5 mt-14"
           >
             {[
               { icon: FaGithub, href: "https://github.com/Sid-Hurry", label: "GitHub", color: "bg-amber-300 hover:bg-amber-400 text-black" },
@@ -128,4 +128,3 @@ export default function Hero() {
     </section>
   );
 }
-
