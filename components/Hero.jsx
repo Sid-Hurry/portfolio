@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Download, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Hero() {
@@ -56,7 +56,7 @@ export default function Hero() {
         >
           <motion.h1
             variants={itemVariants}
-            className="text-3xl xs:text-4xl sm:text-6xl md:text-8xl font-black uppercase tracking-tight mb-8 leading-none text-foreground"
+            className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black uppercase tracking-tight mb-8 leading-none text-foreground"
           >
             Hi, I'm{" "}
             <span className="inline-block px-4 xs:px-6 py-2 my-2 border-[4px] border-border-color bg-primary text-white dark:text-black shadow-[4px_4px_0px_0px_var(--border-color)] sm:shadow-[6px_6px_0px_0px_var(--border-color)] rotate-[-1deg]">
@@ -96,9 +96,9 @@ export default function Hero() {
               href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 rounded-xl border-[3.5px] border-border-color bg-background hover:bg-primary hover:text-white dark:hover:text-black text-foreground font-black uppercase tracking-wider shadow-[5px_5px_0px_0px_var(--border-color)] hover:translate-x-[-4px] hover:translate-y-[-4px] hover:shadow-[9px_9px_0px_0px_var(--border-color)] active:translate-x-0 active:translate-y-0 active:shadow-[1px_1px_0px_0px_var(--border-color)] transition-all flex items-center justify-center gap-2 w-full sm:w-auto"
+              className="px-8 py-4 rounded-xl border-[3.5px] border-border-color bg-background hover:bg-primary hover:text-white dark:hover:text-black text-foreground font-black uppercase tracking-wider shadow-[5px_5px_0px_0px_var(--border-color)] hover:translate-x-[-4px] hover:translate-y-[-4px] hover:shadow-[9px_9px_0px_0px_var(--border-color)] active:translate-x-0 active:translate-y-0 active:shadow-[1px_1px_0px_0px_var(--border-color)] transition-all flex items-center justify-center w-full sm:w-auto"
             >
-              <Download className="w-5 h-5" /> Resume
+              Resume
             </a>
           </motion.div>
 

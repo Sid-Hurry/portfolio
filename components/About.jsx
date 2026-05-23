@@ -20,15 +20,15 @@ export default function About() {
           <div className="w-24 h-2 bg-primary border-2 border-border-color shadow-[2px_2px_0px_0px_var(--border-color)] mx-auto"></div>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-12 gap-12 lg:gap-16 items-center max-w-5xl mx-auto">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.5 }}
-            className="space-y-6"
+            className="space-y-6 md:col-span-7 lg:col-span-8"
           >
-            <p className="text-lg md:text-xl font-bold text-foreground/80 leading-relaxed">
+            <p className="text-lg text-foreground/80 font-semibold leading-relaxed">
               I am a passionate Full Stack Developer with experience in{" "}
               <span className="inline px-2.5 py-1 border-[2.5px] border-border-color bg-amber-300 dark:bg-amber-400 text-black font-black shadow-[2px_2px_0px_0px_var(--border-color)] box-decoration-clone">
                 React.js, Next.js, Node.js, Express.js, MongoDB, and SQL.
@@ -50,7 +50,7 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0, rotate: 1 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.5 }}
-            className="relative max-w-[280px] xs:max-w-sm mx-auto md:max-w-md mt-8 md:mt-0"
+            className="relative max-w-[280px] xs:max-w-sm mx-auto md:max-w-md mt-8 md:mt-0 md:col-span-5 lg:col-span-4"
           >
             <div className="absolute -inset-2.5 xs:-inset-4 bg-primary border-[3px] border-border-color shadow-[4px_4px_0px_0px_var(--border-color)] xs:shadow-[6px_6px_0px_0px_var(--border-color)] rounded-2xl rotate-[-3deg]" />
             <div className="relative overflow-hidden border-[4px] border-border-color bg-amber-200 dark:bg-zinc-900 shadow-[6px_6px_0px_0px_var(--border-color)] xs:shadow-[8px_8px_0px_0px_var(--border-color)] rounded-2xl">

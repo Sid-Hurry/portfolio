@@ -31,11 +31,13 @@ export default function Navbar() {
       transition={{ duration: 0.5, ease: "easeOut" }}
       className={`fixed left-1/2 -translate-x-1/2 z-50 w-[92%] max-w-6xl transition-all duration-300 border-[3.5px] border-border-color bg-background text-foreground ${
         isScrolled
-          ? "top-3 py-2 px-4 shadow-[4px_4px_0px_0px_var(--shadow-color)] rounded-xl"
-          : "top-5 py-4 px-6 shadow-[6px_6px_0px_0px_var(--shadow-color)] rounded-2xl"
+          ? "top-3 py-2 shadow-[4px_4px_0px_0px_var(--shadow-color)] rounded-xl"
+          : "top-5 py-4 shadow-[6px_6px_0px_0px_var(--shadow-color)] rounded-2xl"
       }`}
     >
-      <div className="flex justify-between items-center">
+      <div className={`flex justify-between items-center transition-all duration-300 ${
+        isScrolled ? "px-4" : "px-6"
+      }`}>
         <a 
           href="#" 
           className="text-xl md:text-2xl font-black uppercase tracking-tight text-gradient hover:scale-105 active:scale-95 transition-transform"
@@ -50,7 +52,7 @@ export default function Navbar() {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-xs font-black uppercase tracking-wider px-4 py-2 border-2 border-transparent hover:border-border-color hover:bg-primary hover:text-black dark:hover:text-black transition-all rounded-lg"
+                className="text-sm font-black uppercase tracking-wider px-4 py-2 border-2 border-transparent hover:border-border-color hover:bg-primary hover:text-black dark:hover:text-black transition-all rounded-lg"
               >
                 {link.name}
               </a>
@@ -80,7 +82,7 @@ export default function Navbar() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="absolute top-[115%] left-0 w-full bg-background border-[3.5px] border-border-color shadow-[4px_4px_0px_0px_var(--shadow-color)] flex flex-col items-center py-5 gap-4 md:hidden rounded-xl overflow-hidden"
+            className="absolute top-[115%] left-[-3.5px] right-[-3.5px] bg-background border-[3.5px] border-border-color shadow-[4px_4px_0px_0px_var(--shadow-color)] flex flex-col items-center py-5 gap-4 md:hidden rounded-xl overflow-hidden"
           >
             {navLinks.map((link) => (
               <a

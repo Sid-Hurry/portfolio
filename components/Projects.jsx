@@ -74,17 +74,17 @@ export default function Projects() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-50px" }}
-          className="flex flex-col gap-12 max-w-5xl mx-auto"
+          className="flex flex-col gap-8 max-w-4xl mx-auto"
         >
           {projects.map((project, index) => (
             <motion.div
               key={index}
               variants={itemVariants}
-              className={`border-[3.5px] border-border-color ${project.color} shadow-[6px_6px_0px_0px_var(--shadow-color)] hover:translate-x-[-6px] hover:translate-y-[-6px] hover:shadow-[12px_12px_0px_0px_var(--shadow-color)] active:translate-x-0 active:translate-y-0 active:shadow-[1px_1px_0px_0px_var(--shadow-color)] transition-all duration-300 rounded-3xl overflow-hidden group flex flex-col relative`}
+              className={`border-[3.5px] border-border-color ${project.color} shadow-[6px_6px_0px_0px_var(--shadow-color)] hover:translate-x-[-6px] hover:translate-y-[-6px] hover:shadow-[12px_12px_0px_0px_var(--shadow-color)] active:translate-x-0 active:translate-y-0 active:shadow-[1px_1px_0px_0px_var(--border-color)] transition-all duration-300 rounded-3xl overflow-hidden group flex flex-col relative`}
             >
               {/* Project Content */}
-              <div className="p-5 xs:p-8 md:p-12 flex-grow flex flex-col relative z-10">
-                <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8">
+              <div className="p-5 xs:p-6 md:p-8 flex-grow flex flex-col relative z-10">
+                <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-6">
                   <h3 className="text-2xl xs:text-3xl md:text-4xl font-black uppercase tracking-tight text-foreground">
                     {project.title}
                   </h3>
@@ -114,12 +114,12 @@ export default function Projects() {
                   </div>
                 </div>
 
-                <p className="text-foreground/80 font-bold text-sm md:text-base mb-10 max-w-3xl leading-relaxed">
+                <p className="text-foreground/80 font-bold text-sm md:text-base mb-6 max-w-3xl leading-relaxed">
                   {project.description}
                 </p>
 
                 {/* Tech Stack Tags */}
-                <div className="flex flex-wrap gap-3 mt-auto pt-8 border-t-[2.5px] border-border-color">
+                <div className="flex flex-wrap gap-3 mt-auto pt-6 border-t-[2.5px] border-border-color">
                   {project.techStack.map((tech, techIndex) => (
                     <span
                       key={techIndex}

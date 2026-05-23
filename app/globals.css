@@ -37,6 +37,10 @@ body {
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
+p {
+  text-align: justify;
+}
+
 html {
   scroll-behavior: smooth;
 }
