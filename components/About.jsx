@@ -1,30 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
-import { Code, Database, Rocket } from "lucide-react";
 
 export default function About() {
-  const cards = [
-    {
-      icon: Code,
-      title: "Frontend Development",
-      description: "Building responsive and interactive user interfaces using React and Next.js.",
-      color: "bg-rose-200 dark:bg-rose-950/40",
-    },
-    {
-      icon: Database,
-      title: "Backend & Data",
-      description: "Creating robust APIs and exploring data analysis with Excel and SQL.",
-      color: "bg-sky-200 dark:bg-sky-950/40",
-    },
-    {
-      icon: Rocket,
-      title: "Impactful Products",
-      description: "Passionate about building real-world projects and participating in hackathons.",
-      color: "bg-purple-200 dark:bg-purple-950/40",
-    },
-  ];
-
   return (
     <section id="about" className="py-24 relative">
       <div className="container mx-auto px-6 md:px-12">
@@ -51,38 +30,37 @@ export default function About() {
           >
             <p className="text-lg md:text-xl font-bold text-foreground/80 leading-relaxed">
               I am a passionate Full Stack Developer with experience in{" "}
-              <span className="inline-block px-2.5 py-1 border-[2.5px] border-border-color bg-amber-300 dark:bg-amber-400 text-black font-black shadow-[2px_2px_0px_0px_var(--border-color)] rotate-[-0.5deg]">
-                React.js, Next.js, Node.js, Express.js, MongoDB, and SQL
-              </span>.
+              <span className="inline px-2.5 py-1 border-[2.5px] border-border-color bg-amber-300 dark:bg-amber-400 text-black font-black shadow-[2px_2px_0px_0px_var(--border-color)] box-decoration-clone">
+                React.js, Next.js, Node.js, Express.js, MongoDB, and SQL.
+              </span>
             </p>
             <p className="text-lg text-foreground/80 font-semibold leading-relaxed">
-              I enjoy building responsive and user-friendly web applications while also exploring data analysis. My goal is to bridge the gap between complex backend systems and intuitive frontend experiences.
+              I enjoy building responsive web applications that feel smooth, practical, and easy to use. My goal is to connect strong backend logic with frontend experiences people actually enjoy.
             </p>
             <p className="text-lg text-foreground/80 font-semibold leading-relaxed">
-              I love working on real-world projects, participating in hackathons, and bringing innovative ideas to life that create a positive impact.
+              I like turning ideas into shipped projects, from dashboards and APIs to polished interfaces. Outside code, cars keep me curious about performance, precision, and design details.
             </p>
           </motion.div>
 
-          <div className="grid gap-6">
-            {cards.map((card, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className={`p-6 border-[3px] border-border-color ${card.color} text-foreground shadow-[4px_4px_0px_0px_var(--border-color)] hover:translate-x-[-4px] hover:translate-y-[-4px] hover:shadow-[8px_8px_0px_0px_var(--border-color)] active:translate-x-0 active:translate-y-0 active:shadow-[1px_1px_0px_0px_var(--border-color)] transition-all flex items-start gap-4 rounded-2xl cursor-default`}
-              >
-                <div className="p-3 border-2 border-border-color bg-background text-foreground shadow-[2px_2px_0px_0px_var(--border-color)] rounded-xl shrink-0">
-                  <card.icon className="w-6 h-6" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-black uppercase mb-1">{card.title}</h3>
-                  <p className="text-foreground/80 font-bold text-sm leading-relaxed">{card.description}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+          <motion.div
+            initial={{ opacity: 0, x: 50, rotate: 1 }}
+            whileInView={{ opacity: 1, x: 0, rotate: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.5 }}
+            className="relative max-w-sm mx-auto md:max-w-md"
+          >
+            <div className="absolute -inset-4 bg-primary border-[3px] border-border-color shadow-[6px_6px_0px_0px_var(--border-color)] rounded-2xl rotate-[-3deg]" />
+            <div className="relative overflow-hidden border-[4px] border-border-color bg-amber-200 dark:bg-zinc-900 shadow-[8px_8px_0px_0px_var(--border-color)] rounded-2xl">
+              <Image
+                src="/pink-panther-glasses.png"
+                alt="Pink panther wearing glasses"
+                width={1024}
+                height={1024}
+                sizes="(max-width: 768px) 100vw, 42vw"
+                className="w-full h-auto object-cover"
+              />
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>

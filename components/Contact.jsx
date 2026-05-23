@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, MessageSquare, Send } from "lucide-react";
+import { Mail, Send } from "lucide-react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Contact() {
   return (
@@ -19,11 +20,11 @@ export default function Contact() {
           </h2>
           <div className="w-24 h-2 bg-primary border-2 border-border-color shadow-[2px_2px_0px_0px_var(--border-color)] mx-auto mb-8"></div>
           <p className="text-foreground/80 font-bold max-w-2xl mx-auto text-base md:text-lg">
-            Whether you have a question, a project idea, or just want to say hi, I'll try my best to get back to you!
+            Have a project, opportunity, or idea in mind? Send a message and I'll get back to you.
           </p>
         </motion.div>
 
-        <div className="max-w-4xl mx-auto flex flex-col md:flex-row gap-12">
+        <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-12">
           {/* Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -32,29 +33,45 @@ export default function Contact() {
             transition={{ duration: 0.5 }}
             className="flex-1"
           >
-            <div className="border-[3.5px] border-border-color bg-sky-100 dark:bg-zinc-900/60 p-8 shadow-[6px_6px_0px_0px_var(--shadow-color)] hover:translate-x-[-3px] hover:translate-y-[-3px] hover:shadow-[9px_9px_0px_0px_var(--shadow-color)] transition-all rounded-3xl h-full flex flex-col justify-center gap-8">
-              <div className="flex items-center gap-4">
-                <div className="w-14 h-14 rounded-xl border-2 border-border-color bg-background text-foreground shadow-[2.5px_2.5px_0px_0px_var(--border-color)] flex items-center justify-center shrink-0">
-                  <Mail className="w-6 h-6" />
+            <div className="border-[3.5px] border-border-color bg-sky-100 dark:bg-zinc-900/60 p-8 shadow-[6px_6px_0px_0px_var(--shadow-color)] hover:translate-x-[-3px] hover:translate-y-[-3px] hover:shadow-[9px_9px_0px_0px_var(--shadow-color)] transition-all rounded-3xl h-full flex flex-col gap-7">
+              <div>
+                <p className="inline-block mb-4 px-3 py-1 border-2 border-border-color bg-amber-300 text-black font-black uppercase text-xs tracking-wider shadow-[2px_2px_0px_0px_var(--border-color)] rounded-lg">
+                  Open to connect
+                </p>
+                <h3 className="font-black uppercase text-2xl mb-3">Let's Talk</h3>
+                <p className="text-foreground/75 font-bold leading-relaxed">
+                  I am open to web projects, internships, collaborations, and data-focused ideas.
+                </p>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-xl border-2 border-border-color bg-primary text-white dark:text-black shadow-[2.5px_2.5px_0px_0px_var(--border-color)] flex items-center justify-center shrink-0">
+                  <Mail className="w-5 h-5" />
                 </div>
-                <div>
-                  <h3 className="font-black uppercase text-lg">Email Me</h3>
-                  <a href="mailto:siddharthhooda0013@gmail.com" className="text-foreground/80 hover:text-primary transition-colors font-bold text-sm md:text-base">
+                <div className="min-w-0 pt-1">
+                  <p className="font-black uppercase text-sm mb-1">Email Me</p>
+                  <a href="mailto:siddharthhooda0013@gmail.com" className="text-foreground/80 hover:text-primary transition-colors font-bold text-sm break-words">
                     siddharthhooda0013@gmail.com
                   </a>
                 </div>
               </div>
-              <div className="flex items-center gap-4">
-                <div className="w-14 h-14 rounded-xl border-2 border-border-color bg-background text-foreground shadow-[2.5px_2.5px_0px_0px_var(--border-color)] flex items-center justify-center shrink-0">
-                  <MessageSquare className="w-6 h-6" />
-                </div>
-                <div>
-                  <h3 className="font-black uppercase text-lg">Social Media</h3>
-                  <div className="flex gap-4 mt-1 font-bold text-sm md:text-base">
-                    <a href="https://www.linkedin.com/in/siddharth-hooda-188606324/" target="_blank" rel="noopener noreferrer" className="text-foreground/80 hover:text-primary transition-colors">LinkedIn</a>
-                    <a href="https://github.com/Sid-Hurry" target="_blank" rel="noopener noreferrer" className="text-foreground/80 hover:text-primary transition-colors">GitHub</a>
-                  </div>
-                </div>
+
+              <div className="flex gap-4">
+                {[
+                  { icon: FaLinkedin, href: "https://www.linkedin.com/in/siddharth-hooda-188606324/", label: "LinkedIn", color: "bg-sky-300" },
+                  { icon: FaGithub, href: "https://github.com/Sid-Hurry", label: "GitHub", color: "bg-amber-300" },
+                ].map((social) => (
+                  <a
+                    key={social.label}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={social.label}
+                    className={`w-14 h-14 rounded-xl border-2 border-border-color ${social.color} text-black shadow-[2.5px_2.5px_0px_0px_var(--border-color)] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[4.5px_4.5px_0px_0px_var(--border-color)] active:translate-x-0 active:translate-y-0 active:shadow-[1px_1px_0px_0px_var(--border-color)] transition-all flex items-center justify-center`}
+                  >
+                    <social.icon className="w-7 h-7" />
+                  </a>
+                ))}
               </div>
             </div>
           </motion.div>
@@ -74,7 +91,6 @@ export default function Contact() {
                   <input
                     type="text"
                     id="name"
-                    placeholder="John Doe"
                     className="w-full px-4 py-3 rounded-xl bg-background border-[3px] border-border-color text-foreground placeholder:text-foreground/50 font-bold outline-none focus:shadow-[4px_4px_0px_0px_var(--border-color)] transition-all"
                   />
                 </div>
@@ -83,7 +99,6 @@ export default function Contact() {
                   <input
                     type="email"
                     id="email"
-                    placeholder="john@example.com"
                     className="w-full px-4 py-3 rounded-xl bg-background border-[3px] border-border-color text-foreground placeholder:text-foreground/50 font-bold outline-none focus:shadow-[4px_4px_0px_0px_var(--border-color)] transition-all"
                   />
                 </div>
@@ -93,7 +108,6 @@ export default function Contact() {
                 <textarea
                   id="message"
                   rows="5"
-                  placeholder="Your message..."
                   className="w-full px-4 py-3 rounded-xl bg-background border-[3px] border-border-color text-foreground placeholder:text-foreground/50 font-bold outline-none focus:shadow-[4px_4px_0px_0px_var(--border-color)] transition-all resize-none"
                 ></textarea>
               </div>

@@ -54,12 +54,6 @@ export default function Hero() {
           animate="visible"
           className="max-w-4xl mx-auto text-center"
         >
-          <motion.div variants={itemVariants} className="mb-8 inline-block">
-            <span className="px-5 py-2.5 rounded-xl border-[3px] border-border-color bg-amber-300 text-black text-xs md:text-sm font-black uppercase tracking-widest shadow-[3px_3px_0px_0px_var(--border-color)]">
-              Welcome to my portfolio
-            </span>
-          </motion.div>
-
           <motion.h1
             variants={itemVariants}
             className="text-4xl sm:text-6xl md:text-8xl font-black uppercase tracking-tight mb-8 leading-none text-foreground"
@@ -74,19 +68,18 @@ export default function Hero() {
             variants={itemVariants}
             className="text-lg sm:text-2xl md:text-3xl font-black uppercase text-foreground/90 mb-8 tracking-wide"
           >
-            Full Stack Developer &{" "}
+            Full Stack Developer | Data Analyst |{" "}
             <span className="inline-block px-3 py-1 border-2 border-border-color bg-secondary text-white shadow-[3px_3px_0px_0px_var(--border-color)]">
-              Data Analyst
-            </span>{" "}
-            Enthusiast
+              Car Enthusiast
+            </span>
           </motion.h2>
 
           <motion.div
             variants={itemVariants}
             className="text-base md:text-xl font-bold text-foreground/80 mb-12 max-w-2xl mx-auto leading-relaxed bg-background/50 border-[3.5px] border-border-color p-6 shadow-[5px_5px_0px_0px_var(--border-color)] rounded-2xl"
           >
-            Building scalable web applications and solving real-world problems
-            through technology and data.
+            I build clean full-stack products, turn data into useful decisions,
+            and bring a car enthusiast's eye for performance and detail.
           </motion.div>
 
           <motion.div
