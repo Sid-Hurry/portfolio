@@ -35,10 +35,13 @@ export default function About() {
               </span>
             </p>
             <p className="text-lg text-foreground/80 font-semibold leading-relaxed">
-              I enjoy building responsive web applications that feel smooth, practical, and easy to use. My goal is to connect strong backend logic with frontend experiences people actually enjoy.
+              For me, development is more than just writing code. I enjoy solving problems, learning new technologies, and turning simple ideas into real projects that people can actually use. Whether it is building dashboards, APIs, or developer tools, I like creating applications that feel smooth, practical, and polished.
             </p>
             <p className="text-lg text-foreground/80 font-semibold leading-relaxed">
-              I like turning ideas into shipped projects, from dashboards and APIs to polished interfaces. Outside code, cars keep me curious about performance, precision, and design details.
+              I’m also interested in data analysis and enjoy working with data to find meaningful insights and improve decision making. Exploring different technologies and participating in hackathons has helped me grow as a developer and taught me the importance of teamwork, adaptability, and continuous learning.
+            </p>
+            <p className="text-lg text-foreground/80 font-semibold leading-relaxed">
+              Outside of coding, I’m really into cars, especially Aston Martin, Ferrari, and classic Alfa Romeos. I love the mix of performance, engineering, and timeless design behind them, and honestly, that attention to detail inspires the way I approach building products too.
             </p>
           </motion.div>
 
@@ -52,7 +55,7 @@ export default function About() {
             <div className="absolute -inset-4 bg-primary border-[3px] border-border-color shadow-[6px_6px_0px_0px_var(--border-color)] rounded-2xl rotate-[-3deg]" />
             <div className="relative overflow-hidden border-[4px] border-border-color bg-amber-200 dark:bg-zinc-900 shadow-[8px_8px_0px_0px_var(--border-color)] rounded-2xl">
               <Image
-                src="/pink-panther-glasses.png"
+                src="/pfp2.png"
                 alt="Pink panther wearing glasses"
                 width={1024}
                 height={1024}

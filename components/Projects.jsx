@@ -7,7 +7,7 @@ import { FaGithub } from "react-icons/fa";
 const projects = [
   {
     title: "Cryptonest",
-    description: "A cryptocurrency tracking platform that provides real-time prices, market trends, and detailed analytics using CoinGecko API.",
+    description: "Cryptonest is a modern cryptocurrency tracking platform designed to provide users with real time market insights in a simple and interactive way. The platform allows users to explore live coin prices, market trends, and detailed analytics through a clean and responsive interface. While building this project, I worked on API integration, dynamic data rendering, and frontend optimization using React.js and CoinGecko API. ",
     techStack: ["React.js", "Node.js", "MongoDB", "Tailwind CSS", "CoinGecko API"],
     liveLink: "https://crypto-nest-hwvo.vercel.app/",
     githubLink: "https://github.com/Sid-Hurry/CryptoNest",
@@ -15,7 +15,7 @@ const projects = [
   },
   {
     title: "SortedHive",
-    description: "A URL shortener and QR code generator that converts long URLs into clean and shareable links with QR support.",
+    description: "SortedHive is a URL shortener and QR code generator designed to make sharing links simple, fast, and convenient. The platform converts long URLs into clean and shareable links while also generating QR codes instantly through a smooth and user friendly interface. It focuses on providing a quick and seamless experience for sharing links across platforms and devices.",
     techStack: ["Next.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
     liveLink: "https://sortedhive.vercel.app/",
     githubLink: "https://github.com/Sid-Hurry/sortedhive",
@@ -23,15 +23,15 @@ const projects = [
   },
   {
     title: "CareConnect",
-    description: "A hospital management platform built as a group project for Smart India Hackathon (SIH) to streamline communication between doctors, staff, and administration.",
+    description: "CareConnect is a hospital management platform developed as a group project for Smart India Hackathon to improve coordination between doctors, staff, and administration. The platform streamlines patient record management, inventory tracking, and internal communication through a unified and user friendly system designed to enhance operational efficiency in healthcare environments..",
     techStack: ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
     liveLink: "https://careconnect-1v6s.vercel.app/",
-    githubLink: "#",
+    githubLink: "https://github.com/Krish-Jain30/Care-Connect",
     color: "bg-sky-100 dark:bg-zinc-900/60",
   },
   {
     title: "SnipWand",
-    description: "An AI-powered README generator with real-time markdown preview that helps developers create professional documentation easily.",
+    description: "SnipWand is a README generator designed to help developers create structured and professional project documentation with ease. The platform offers real time markdown preview, pre built sections, and a clean interface that simplifies the documentation process and makes creating polished README files faster and more convenient.",
     techStack: ["Next.js", "React.js", "Tailwind CSS", "Markdown", "API Routes"],
     liveLink: "https://snipwand.vercel.app/",
     githubLink: "https://github.com/Sid-Hurry/snipwand",
