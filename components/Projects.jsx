@@ -37,6 +37,22 @@ const projects = [
     githubLink: "https://github.com/Sid-Hurry/snipwand",
     color: "bg-rose-100 dark:bg-zinc-900/60",
   },
+  {
+    title: "PixelCode",
+    description: "PixelCode is a code to image generator designed to transform source code into clean and visually appealing screenshots for developers and creators. The platform provides customizable layouts, auto language detection, syntax highlighting, and high quality exports through a minimal and distraction free interface. It focuses on making code sharing simple, professional, and optimized for portfolios, blogs, and social media while keeping the entire experience fast and completely client side.",
+    techStack: ["Next.js", "React.js", "Tailwind CSS", "Framer Motion", "Prism.js", "Lucide React"],
+    liveLink: "https://pixelcode-ten.vercel.app/",
+    githubLink: "https://github.com/Sid-Hurry/pixelcode",
+    color: "bg-purple-100 dark:bg-zinc-900/60",
+  },
+  {
+    title: "Themenation",
+    description: "Themenation is an interactive UI design playground built to explore and compare multiple modern design styles in a single platform. The application allows users to switch between themes like Glassmorphism, Neumorphism, Neobrutalism, and Cyberpunk while viewing components and layouts in real time through a visually engaging interface. It provides a smooth and immersive experience for experimenting with modern UI trends, comparing design systems side by side.",
+    techStack: ["Next.js", "Tailwind CSS", "Framer Motion", "TypeScript", "Shadcn UI", "Lucide React"],
+    liveLink: "https://themenation.vercel.app/",
+    githubLink: "https://github.com/Sid-Hurry/themenation",
+    color: "bg-orange-100 dark:bg-zinc-900/60",
+  },
 ];
 
 export default function Projects() {
@@ -88,7 +104,7 @@ export default function Projects() {
                   <h3 className="text-2xl xs:text-3xl md:text-4xl font-black uppercase tracking-tight text-foreground">
                     {project.title}
                   </h3>
-                  
+
                   {/* Action Buttons */}
                   <div className="flex items-center gap-4">
                     {project.githubLink !== "#" && (
